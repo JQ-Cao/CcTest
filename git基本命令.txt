@@ -1,0 +1,28 @@
+1、git init： 文件夹中增加了文件.git
+
+2、git remote -v:显示所有远程仓库
+  git remote add origin git@github.com:zhenglu316/test03.git 把工作目录迁移到github上面
+
+3、git add .==> gitcommit -m "提交的message信息" ==> git push origin master
+
+4、git diff/git diff HEAD/git diff master/git diff origin/master
+
+5、git status
+
+6、git branch -v :显示分支， *当前分支， 并显示分支对应的最新log
+  git branch :显示分支， *当前分支， 不显示分支对应的最新log
+	git branch newbranchname: 创建名为newbranchname新分支，但仍处於当前分支
+	git checkout -b newbranchname [版本号] :b代表branch,作用是创建名为newbranchname新分支,并切换至新分支，如未指定[版本号]，默认从HEAD指向的提交创建分支
+	git branch -d|-D branchname : 删除本地分支(git push origin :branchname ——远程删除) 
+	
+7、git log： 显示当前分支的log
+  git log --oneline： 每一行表示一次提交，显示格式可以简洁的显示大量的提交信息
+	git log --oneline --graph:不仅可以显示提交历史而且还显示图形化的分支拓扑
+	
+8、git commit --amend -m "新的提交信息"： 修改最近一次提交的信息
+
+9、git rebase -i HEAD~|^n ： 在vim编辑器中整理近n次提交的内容，可以将这n次提交合并为1次，修改提交的备注信息等
+
+8、git reset --hard HEAD ~|^ : 将当前分支重设到最新的一次提交，及HEAD。
+
+10、git cherry-pick <commit id>： 手动merge
